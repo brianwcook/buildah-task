@@ -7,5 +7,7 @@ RUN dnf -y install wget && \
     chmod +x /usr/local/bin/cosign && \
     wget -O /usr/local/bin/kubectl https://dl.k8s.io/release/v1.29.0/bin/linux/amd64/kubectl && \
     chmod +x /usr/local/bin/kubectl && \
+    wget -O /usr/local/bin/regctl https://github.com/regclient/regclient/releases/latest/download/regctl-linux-amd64 && \
+    chmod +x /usr/local/bin/regctl && \
     dnf -y remove wget
 
