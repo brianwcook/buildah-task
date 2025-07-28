@@ -9,5 +9,3 @@ RUN dnf -y install wget && \
     chmod +x /usr/local/bin/kubectl && \
     dnf -y remove wget
 
-# Copy the public key for attestation verification
-COPY rh03.pub /etc/cosign/keys/rh03.pub
