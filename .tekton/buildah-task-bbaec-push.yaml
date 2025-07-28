@@ -20,6 +20,8 @@ spec:
   params:
   - name: git-url
     value: '{{source_url}}'
+  - name: event_type
+    value: "{{ event_type }}"
   - name: revision
     value: '{{revision}}'
   - name: output-image
