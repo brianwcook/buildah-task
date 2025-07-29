@@ -15,6 +15,10 @@ RUN echo 'alt_arch() { \
 }' > /usr/local/bin/alt_arch && \
     chmod +x /usr/local/bin/alt_arch
 
+# Print detected architecture
+RUN echo "Detected architecture: $(uname -m)" && \
+    echo "Normalized architecture: $(alt_arch)"
+
 # Install cosign
 RUN wget -O /usr/local/bin/cosign https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-$(alt_arch) && \
     chmod +x /usr/local/bin/cosign
