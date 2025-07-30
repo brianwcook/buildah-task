@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi10/ubi-minimal:latest
 
 # Install wget, tar, and gzip for downloading and extracting binaries
-RUN microdnf install -y wget tar gzip git buildah skopeo && \
+RUN microdnf install -y wget tar gzip git buildah jq skopeo && \
     microdnf clean all
 
 # Install cosign with architecture detection
