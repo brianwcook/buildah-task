@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi10/ubi-minimal:latest
 
-# Install wget for downloading binaries
-RUN microdnf install -y wget && \
+# Install wget and tar for downloading and extracting binaries
+RUN microdnf install -y wget tar && \
     microdnf clean all
 
 # Install cosign with architecture detection
@@ -48,7 +48,7 @@ RUN set -e && \
     chmod +x /usr/local/bin/label-mod && \
     rm /tmp/label-mod.tar.gz
 
-# Clean up wget
-RUN microdnf remove -y wget && \
+# Clean up wget and tar
+RUN microdnf remove -y wget tar && \
     microdnf clean all
 
