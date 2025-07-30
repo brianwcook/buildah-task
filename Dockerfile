@@ -49,6 +49,6 @@ RUN set -e && \
     rm /tmp/label-mod.tar.gz
 
 # Clean up wget, tar, and gzip
-RUN microdnf remove -y wget tar gzip && \
+RUN microdnf remove -y wget tar  && \
     microdnf clean all
 
